@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function addData(){
+            var NtextInput = document.getElementById("NameTextInput");
+            console.log(NtextInput);
+            var AtextInput = document.getElementById("AddressTextInput");
+            var TtextInput = document.getElementById("TelTextInput");
+            var NData = NtextInput.value;
+            var AData = AtextInput.value;
+            var TData = TtextInput.value;
+            var tr = document.createElement("tr");
+            var table = document.getElementById("Data");
+            table.appendChild(tr);
+
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+
+            td1.innerHTML=NData;
+            td2.innerHTML=AData;
+            td3.innerHTML=TData;
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            // td.innerHTML = NData;
+            // var table = document.getElementById("Data");
+            // table.appendChild(td);
+
+            // var td = document.createElement("td");
+            // td.innerHTML = AData;
+            // var table = document.getElementById("Data");
+            // table.appendChild(td);
+
+            // var td = document.createElement("td");
+            // td.innerHTML = TData;
+            // var table = document.getElementById("Data");
+            // table.appendChild(td);
+        }
+    </script>
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <p>ชื่อ-สกุล <input type="text" id="NameTextInput"></p>
+        <p>ที่อยู่ <input type="text" id="AddressTextInput"></p>
+        <p>เบอร์โทรศัพท์ <input type="number" id="TelTextInput"></p>
+        <input type="button" id="addButton" value="เพิ่ม" onclick="addData()">
+    </form>
+    <table id="Data">
+        <tr>
+            <td>ชื่อลูกค้า</td>
+            <td>ที่อยู่</td>
+            <td>โทรศัพท์</td>
+        </tr>
+    </table>
+</body>
+
+</html>
